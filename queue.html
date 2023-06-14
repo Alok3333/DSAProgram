@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue</title>
+    <script>
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+
+      function queueRear(item) {
+        if (currentSize < maxSize) {
+          queue[currentSize] = item;
+          currentSize += 1;
+        } else {
+          alert('Queue is full');
+        }
+      }
+
+      function queueFront() {
+        if (currentSize > 0) {
+          for (var i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+          }
+          currentSize -= 1;
+          queue.length = currentSize;
+        }
+        else {
+            alert("Queue is already empty")
+        }
+      }
+
+      function display() {
+        console.log(queue);
+      }
+
+      queueRear(30);
+      queueRear(40);
+      queueRear(50);
+      queueRear(60);
+      queueFront();
+
+      display();
+    </script>
+  </head>
+  <body></body>
+</html>

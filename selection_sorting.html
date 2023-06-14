@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Selection Sorting</title>
+    <script>
+      // Selection Sort
+      let data = [20, 12, 53, 3];
+
+      function selectSort(item) {
+        for (var i = 0; i < item.length; i++) {
+          // console.log(item[i])
+          let midId = i;
+          for (var j = i + 1; j < item.length; j++) {
+            if (item[j] < item[midId]) {
+              midId = j;
+            }
+          }
+          let temp = item[midId];
+          item[midId] = item[i];
+          item[i] = temp;
+        }
+      }
+
+      selectSort(data);
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>

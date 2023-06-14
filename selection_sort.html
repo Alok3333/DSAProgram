@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort</title>
+    <script>
+        let arr = [3, 50, 38, 25, 12, 20, 30];
+        let min;
+
+        for(var i = 0; i < arr.length; i++){
+            min = i;
+            for(var j = i + 1; j < arr.length; j++){
+                if(arr[j] < arr[min]){
+                    min = j
+                }
+            }
+            let temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        }
+
+        console.log(arr)
+    </script>
+</head>
+<body>
+    <h1>Selection Sort</h1>
+</body>
+</html>

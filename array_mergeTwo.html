@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge two array with while loop</title>
+
+    <script>
+      let array1 = [2,4,7,9,23,34];
+      let array2 = [3,5,10,19];
+
+      let data = [];
+
+      let d1 = 0;
+      let d2 = 0;
+      let d3 = 0;
+
+      while(d1<array1.length && d2<array2.length){
+        if(array1[d1] < array2[d2]){
+            data[d3] = array1[d1];
+            d1++;
+        }
+        else{
+            data[d3] = array2[d2]
+            d2++;
+        }
+        d3++;
+      }
+
+      while (d1<array1.length) {
+        data[d3] = array1[d1];
+        d1++;
+        d3++;
+      }
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>

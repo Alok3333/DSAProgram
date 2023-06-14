@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Array</title>
+
+    <script>
+        let data = [2,99,4,34,56,2,6,9,8,7,22,12,10];
+
+        function inputdata() {
+            let dataVal = document.getElementById('element').value
+
+            if(dataVal < data.length && typeof parseInt(dataVal) === "number" && dataVal > -1){
+
+                alert(data[dataVal]);
+
+            }
+            else{
+                alert("Please enter valid number");
+            }
+        }
+
+        // let x = 7;
+        // document.write(data[x]);
+
+        // for(var i = 0; i < data.length; i++){
+        //     document.write(`${i} : ${data[i]} <br/>`);
+        // }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="inputdata()">Check</button>
+    
+</body>
+</html>

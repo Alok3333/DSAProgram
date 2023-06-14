@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Array</title>
+
+    <script>
+      // let arr = [20,30,40,60,70];
+      // let newEle = 50;
+      // let position = 3;
+
+      // console.log(arr);
+
+      // for(let i = arr.length-1; i >= 0; i--){
+      //     // console.log(i);
+      //     if(i >= position){
+      //         arr[i+1] = arr[i]
+      //         if(i == position){
+      //             arr[i] = newEle
+      //         }
+      //     }
+      // }
+      // console.warn(arr);
+
+      function AddElement() {
+        let arr = [20, 30, 40, 60, 70];
+        let newEle = document.getElementById('newElement').value;
+        newEle = parseInt(newEle);
+        let position = document.getElementById('position').value;
+
+        console.log(arr);
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+          // console.log(i);
+          if (i >= position) {
+            arr[i + 1] = arr[i];
+            if (i == position) {
+              arr[i] = newEle;
+            }
+          }
+        }
+        console.warn(arr);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter position number" />
+    <input type="text" id="newElement" placeholder="Enter Element number" />
+
+    <button onclick="AddElement()">Add Position Element</button>
+  </body>
+</html>

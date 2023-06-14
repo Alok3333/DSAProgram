@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Array</title>
+
+    <script>
+      // // method 1st
+      // let nums = [1, 1, 1, 2, 2, 3];
+
+      // function countNums(nums) {
+      //   for (let i = 0; i < nums.length; i++) {
+      //     if (nums[i] === nums[i + 1]) {
+      //       nums.splice(i, 1);
+      //       i--;
+      //     }
+      //   }
+      //   console.log(nums.length);
+      // }
+
+      // countNums(nums);
+
+      // console.log(nums);
+
+      // // method 2rd
+      // let nums = [1, 1, 1, 2, 2, 3];
+
+      // function countNums(nums) {
+      //  let left = 0;
+      //   for (let right = 1; right < nums.length; right++) {
+      //     if (nums[right] !== nums[left]) {
+      //       nums[++left] = nums[right]
+      //     }
+      //   }
+      //   console.log(left+1);
+      // }
+
+      // countNums(nums);
+
+      // console.log(nums);
+
+
+      // // method 3nd
+      // let arr = [1, 2, 3, 4, 55, 66];
+      // let position = 2;
+
+      // for(var i = position; i < arr.length-1; i++){
+      //     // console.warn(i);
+      //     arr[i] = arr[i + 1]
+      // }
+      // arr.length = arr.length-1
+      // console.warn(arr)
+
+      function deletebtn() {
+        let arr = [1, 2, 3, 4, 55, 66];
+        let position = document.getElementById('position').value;
+        position = parseInt(position);
+
+        for (var i = position; i < arr.length - 1; i++) {
+          // console.warn(i);
+          arr[i] = arr[i + 1];
+        }
+        arr.length = arr.length - 1;
+        console.warn(arr);
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="position"
+      placeholder="Enter position want to delete"
+    />
+    <button onclick="deletebtn()">Delete</button>
+  </body>
+</html>
